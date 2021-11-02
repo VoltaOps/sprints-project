@@ -11,7 +11,7 @@ pipeline {
                       stage('Preparation') {
             steps {
                 // Get some code from a GitHub repository
-                git branch:'master', url: 'https://github.com/VoltaOps/Final-Project'
+                git branch:'master', url: 'https://github.com/VoltaOps/sprints-project'
             }
         }
         stage('Build') {
