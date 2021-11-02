@@ -1,0 +1,28 @@
+version: '3'
+
+services:
+  client:
+    build:
+      ./angular-src
+    image: 
+      19216811161000/sprints-final-ang:latest
+    container_name:
+      sprints
+    ports:
+      - "80:80"
+   
+
+  server:
+    environment:
+      - MONGO_URI
+      - NODE_ENV=production
+      - PORT=8080
+    build:
+        ./
+    image:
+        19216811161000/sprints-final-mon:latest
+    container_name:
+      sprints
+    ports:
+      - "8080:8080"
+   
